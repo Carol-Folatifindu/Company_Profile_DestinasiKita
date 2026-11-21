@@ -9,4 +9,7 @@ class HomePageController extends Controller
     public function index(){
         return view('layout.homepage');
     }
+    public function contact(){
+        return view('layout.contact');
+    }
 }
