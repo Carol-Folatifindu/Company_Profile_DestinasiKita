@@ -35,7 +35,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('home') }}"
+                        <a href="{{ route('galery') }}"
                             class="block py-2 px-3 {{ request()->routeIs('home')?'text-fg-brand font bold':''}}"aria-current="page">
                             Galery
                         </a>
