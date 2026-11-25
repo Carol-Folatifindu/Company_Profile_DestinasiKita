@@ -6,10 +6,17 @@ use Illuminate\Http\Request;
 
 class HomePageController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         return view('layout.homepage');
     }
-    public function contact(){
+    public function contact()
+    {
         return view('layout.contact');
+    }
+
+    public function galery()
+    {
+        return view('layout.galeri');
     }
 }

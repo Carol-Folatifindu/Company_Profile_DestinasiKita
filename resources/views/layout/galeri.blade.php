@@ -14,8 +14,8 @@
             ['title' => 'Gunung Rinjani', 'category' => 'Gunung', 'image' => 'assets/gunungrinjani.jpg'],
             ['title' => 'Candi Borobudur', 'category' => 'Budaya', 'image' => 'assets/candiborobudur.jpg'],
             ['title' => 'Tari Kecak', 'category' => 'Budaya', 'image' => 'assets/tarikecak.jpg'],
-            ['title' => 'Gudeg Jogja', 'category' => 'Kuliner', 'image' => 'assets/gudeg.jpg'],
-            ['title' => 'Rawon Surabaya', 'category' => 'Kuliner', 'image' => 'assets/rawon1.jpg'],
+            ['title' => 'Gudeg Jogja', 'category' => 'Kuliner', 'image' => 'assets/gudegjogja.jpg'],
+            ['title' => 'Rawon Surabaya', 'category' => 'Kuliner', 'image' => 'assets/rawonsurabaya.jpg'],
         ];
 
         $testimonials = [
@@ -45,26 +45,31 @@
                 'quote' => 'Itinerary jelas dan harga sesuai. Semoga ada lebih banyak pilihan destinasi.',
             ],
         ];
+
+        $activeCategory = request('category', 'Semua');
+        $filteredGalleries =
+            $activeCategory === 'Semua'
+                ? $galleries
+                : array_filter($galleries, fn($item) => $item['category'] === $activeCategory);
     @endphp
 
     {{-- ===================== GALLERY ===================== --}}
-    <section id="gallery" class="gl-section bg-white pt-24 pb-12 text-gray-900 sm:pt-28">
+    <section id="gallery" class="gl-section bg-white pt-32 pb-12 text-gray-900 sm:pt-36">
         <div class="gl-container mx-auto max-w-screen-xl px-4">
             <h2 class="gl-heading text-center text-3xl font-bold tracking-tight text-gray-900">Galeri Destinasi</h2>
             <p class="gl-subheading mt-2 text-center text-gray-500">Lihat keindahan destinasi wisata pilihan kami</p>
 
             <div class="gl-filters mt-6 flex flex-wrap justify-center gap-2">
                 @foreach ($categories as $category)
-                    <button type="button"
-                        class="gl-filter-btn rounded-full border px-4 py-2 text-sm font-medium transition {{ $loop->first ? 'active border-emerald-500 bg-emerald-500 text-white hover:bg-emerald-600' : 'border-emerald-200 bg-emerald-50 text-emerald-700 hover:bg-emerald-100' }}"
-                        data-filter="{{ $category }}">
+                    <a href="{{ route('galery', $category === 'Semua' ? [] : ['category' => $category]) }}"
+                        class="gl-filter-btn rounded-full border px-4 py-2 text-sm font-medium transition {{ $activeCategory === $category ? 'active border-emerald-500 bg-emerald-500 text-white hover:bg-emerald-600' : 'border-emerald-200 bg-emerald-50 text-emerald-700 hover:bg-emerald-100' }}">
                         {{ $category }}
-                    </button>
+                    </a>
                 @endforeach
             </div>
 
             <div class="gl-grid mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                @foreach ($galleries as $item)
+                @foreach ($filteredGalleries as $item)
                     <figure
                         class="gl-item overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition hover:shadow-md"
                         data-category="{{ $item['category'] }}">
@@ -82,7 +87,6 @@
             </div>
         </div>
     </section>
-
     {{-- ============= TESTIMONIALS ============= --}}
     <div class="bg-white">
         <section id="testimonials" class="gt-section mx-auto max-w-screen-xl px-4 py-12 text-gray-900">
