@@ -6,4 +6,5 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', [HomePageController::class, 'index'])->name('home');;
 Route::get('/contact', [HomePageController::class, 'contact'])->name('contact');
-Route::get('/galery', [HomePageController::class, 'galery'])->name('galery');
+Route::get('/galeri', [HomePageController::class, 'galeri'])->name('galeri');
+Route::get('/package', [HomePageController::class, 'package'])->name('package');

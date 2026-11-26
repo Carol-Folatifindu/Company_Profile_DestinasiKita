@@ -15,8 +15,13 @@ class HomePageController extends Controller
         return view('layout.contact');
     }
 
-    public function galery()
+    public function galeri()
     {
         return view('layout.galeri');
+    }
+
+    public function package()
+    {
+        return view('layout.package');
     }
 }

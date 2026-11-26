@@ -6,9 +6,11 @@
                 <span class="self-center text-xl text-heading font-semibold whitespace-nowrap"></span>
             </a>
             <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <button type="button"
-                    class="text-white bg-emerald-400 focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">Inquire
-                    Now</button>
+                <a href="https://wa.me/628386896819?text=Halo%20Destinasi%20Kita,%20saya%20ingin%20booking%20paket%20Japan%20Cherry%20Blossom%20%26%20Tradition%20Tour">
+                <button type="button" class="text-white bg-emerald-400 focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none cursor-pointer">
+                    Inquire Now
+                </button>
+                </a>    
                 <button data-collapse-toggle="navbar-sticky" type="button"
                     class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
                     aria-controls="navbar-sticky" aria-expanded="false">
@@ -25,25 +27,25 @@
                     class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-default rounded-base bg-neutral-secondary-soft md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-neutral-primary">
                     <li>
                         <a href="{{ route('home') }}"
-                            class="block py-2 px-3 {{ request()->routeIs('home') ? 'text-fg-brand font bold' : '' }}"aria-current="page">
+                            class="block py-2 px-3 {{ request()->routeIs('home') ? 'text-emerald-400 font bold' : '' }}"aria-current="page">
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('home') }}"
-                            class="block py-2 px-3 {{ request()->routeIs('home') ? 'text-fg-brand font bold' : '' }}"aria-current="page">
+                        <a href="{{ route('package') }}"
+                            class="block py-2 px-3 {{ request()->routeIs('package') ? 'text-emerald-400 font bold' : '' }}"aria-current="page">
                             Tour Packages
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('galery') }}"
-                            class="block py-2 px-3 {{ request()->routeIs('galery') ? 'text-fg-brand font bold' : '' }}"aria-current="page">
+                        <a href="{{ route('galeri') }}"
+                            class="block py-2 px-3 {{ request()->routeIs('galeri') ? 'text-emerald-400 font bold' : '' }}"aria-current="page">
                             Galery
                         </a>
                     </li>
                     <li>
                         <a href="{{ route('contact') }}"
-                            class="block py-2 px-3 {{ request()->routeIs('contact') ? 'text-fg-brand font bold' : '' }}">
+                            class="block py-2 px-3 {{ request()->routeIs('contact') ? 'text-emerald-400 font bold' : '' }}">
                             Contact
                         </a>
                     </li>

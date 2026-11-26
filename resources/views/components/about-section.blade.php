@@ -60,9 +60,10 @@
                 <!-- Certified Professional Team -->
                 <div class="flex items-center space-x-4 pt-4 border-t border-gray-100">
                     <div class="flex -space-x-3 overflow-hidden">
-                        <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Team member">
-                        <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Team member">
-                        <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Team member">
+                        <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="{{  asset('assets/member1.jpeg')  }}" alt="Team member">
+                        <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="{{  asset('assets/member2.jpeg')  }}" alt="Team member">
+                        <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="{{  asset('assets/member3.jpeg')  }}" alt="Team member">
+                        <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="{{  asset('assets/member4.jpeg')  }}" alt="Team member">
                     </div>
                     <div>
                         <h4 class="text-sm font-bold text-gray-900">Certified Professional Team</h4>

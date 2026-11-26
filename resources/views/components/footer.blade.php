@@ -61,29 +61,13 @@
                     <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-5">Quick Links</h3>
                     <ul class="space-y-3 text-sm font-light">
                         <li><a href="{{ route('home') }}" class="hover:text-emerald-400 transition-colors">Home</a></li>
-                        <li><a href="#" class="hover:text-emerald-400 transition-colors">Tour Packages</a></li>
-                        <li><a href="{{ route('galery') }}" class="hover:text-emerald-400 transition-colors">Galery</a>
+                        <li><a href="{{ route('package') }}" class="hover:text-emerald-400 transition-colors">Tour Packages</a></li>
+                        <li><a href="{{ route('galeri') }}" class="hover:text-emerald-400 transition-colors">Galery</a>
                         </li>
                         <li><a href="{{ route('contact') }}"
                                 class="hover:text-emerald-400 transition-colors">Contact</a></li>
                     </ul>
                 </div>
-
-                <!-- Kolom 3: Top Destinations -->
-                <div>
-                    <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-5">Top Destinations</h3>
-                    <ul class="space-y-3 text-sm font-light">
-                        <li><a href="#" class="hover:text-emerald-400 transition-colors">Bali Escape</a></li>
-                        <li><a href="#" class="hover:text-emerald-400 transition-colors">Raja Ampat Paradise</a>
-                        </li>
-                        <li><a href="#" class="hover:text-emerald-400 transition-colors">Japan Cherry Blossom</a>
-                        </li>
-                        <li><a href="#" class="hover:text-emerald-400 transition-colors">Grand Europe Tour</a>
-                        </li>
-                        <li><a href="#" class="hover:text-emerald-400 transition-colors">Custom Itinerary</a></li>
-                    </ul>
-                </div>
-
             </div>
 
             <!-- Garis Pemisah Tipis -->
