@@ -61,7 +61,7 @@
 
             <div class="gl-filters mt-6 flex flex-wrap justify-center gap-2">
                 @foreach ($categories as $category)
-                    <a href="{{ route('galery', $category === 'Semua' ? [] : ['category' => $category]) }}"
+                    <a href="{{ route('galeri', $category === 'Semua' ? [] : ['category' => $category]) }}"
                         class="gl-filter-btn rounded-full border px-4 py-2 text-sm font-medium transition {{ $activeCategory === $category ? 'active border-emerald-500 bg-emerald-500 text-white hover:bg-emerald-600' : 'border-emerald-200 bg-emerald-50 text-emerald-700 hover:bg-emerald-100' }}">
                         {{ $category }}
                     </a>
